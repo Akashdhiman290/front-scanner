@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Bar scanner
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="main">
+    <ion-button size="large" (click)="startScan()">Show Scanner</ion-button>
+ 
+  </div>
+  <div style="color: white;padding: 30px;">
+    <ion-row *ngFor="let item of data" style="border:1px solid white">
+
+      <ion-col size="12"  style="display: flex;justify-content: space-between;">
+        <span>{{item.entity.company_sign}}</span>
+        <span>${{item.Price}}</span>
+      </ion-col>
+      <ion-col size="12"  style="display: flex;justify-content: space-between;">
+        <span>{{item.entity.company_commercial_name}}</span>
+        <span>{{item.Date | date : 'mediumDate'}}</span>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

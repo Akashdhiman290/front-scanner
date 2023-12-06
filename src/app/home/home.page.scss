@@ -1,0 +1,31 @@
+.main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.transparentBody {
+  background: transparent !important;
+}
+
+.scan-box {
+  border: 2px solid rgb(177, 2, 2);
+  box-shadow: 0 0 0 100vmax rgb(0, 0, 0, 0.5);
+  content: "";
+  display: block;
+  left: 50%;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+}
+
+.scan-button {
+  margin: 0px;
+  position: absolute;
+  bottom: 100px;
+  width: 100vw;
+  height: 50px;
+  z-index: 11;
+}
